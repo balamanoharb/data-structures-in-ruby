@@ -33,3 +33,7 @@ The following data structures will be implemented.
     - Fenwick Tree / Binary Indexed Tree
     - Segment Tree
 
+## TODO
+
+- configure for travis
+- configure for coveralls.io
