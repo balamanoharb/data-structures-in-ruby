@@ -35,5 +35,7 @@ The following data structures will be implemented.
 
 ## TODO
 
-- configure for travis
-- configure for coveralls.io
+- configure for travis / circle ci
+  - configured travis ci
+- configure for codecov / coveralls / codacy / codeclimate /
+  - 
