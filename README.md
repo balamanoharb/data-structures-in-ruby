@@ -1,5 +1,7 @@
 # DataStore
 
+[![Build Status](https://travis-ci.org/balamanoharb/data-structures-in-ruby.svg?branch=master)](https://travis-ci.org/balamanoharb/data-structures-in-ruby)
+
 This is a naive implementation of standard datastructures for learning.
 
 The following data structures will be implemented.
