@@ -1,5 +1,7 @@
 require "data_store/version"
 
-module DataStore
-  # Your code goes here...
-end
+module DataStore; end
+
+module Algorithms; end
+
+require "algorithms/search"
