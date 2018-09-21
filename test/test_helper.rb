@@ -1,16 +1,26 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
-require "data_store"
 require "simplecov"
-require "codecov"
+
+# module SimpleCov::Configuration
+#   def clean_filters
+#     @filters = []
+#   end
+# end
+
+# SimpleCov.configure do
+#   clean_filters
+#   load_adapter 'test_frameworks'
+# end
+
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
   [
-    # SimpleCov::Formatter::Console,
-    # Want a nice code coverage website? Uncomment this next line!
-    SimpleCov::Formatter::HTMLFormatter,
-    SimpleCov::Formatter::Codecov
+    SimpleCov::Formatter::HTMLFormatter
   ]
 )
 SimpleCov.start
 
+require "data_structures"
 require "minitest/autorun"
+
+include Containers
