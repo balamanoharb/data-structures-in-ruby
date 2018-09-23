@@ -15,7 +15,9 @@ The following data structures will be implemented.
 - [ ] Doubly Linked List
 - [ ] Skip List
 - [ ] Hash Table
-- [ ] Heaps
+- Heaps
+    - [x] MinHeap
+    - [x] MaxHeap
     - [ ] Binomial Heap
     - [ ] Fibonacci Heap
 - [ ] Priority Queue
