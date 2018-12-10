@@ -1,5 +1,5 @@
 module Containers
-  module Heap
+  module BinaryHeap
 
     def initialize(arr = [])
       @store = arr.map {|element| element}
@@ -134,7 +134,7 @@ module Containers
   end
 
   class MinHeap
-    include Heap
+    include BinaryHeap
     private 
     def dominant_logic
       lambda { |a,b| b <=> a } 
@@ -142,7 +142,7 @@ module Containers
   end
 
   class MaxHeap
-    include Heap
+    include BinaryHeap
     private
     def dominant_logic
       lambda {|a,b| a <=> b}

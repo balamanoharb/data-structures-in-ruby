@@ -16,9 +16,9 @@ The following data structures will be implemented.
 - [ ] Skip List
 - [ ] Hash Table
 - Heaps
-    - [x] MinHeap
-    - [x] MaxHeap
-    - [ ] Binomial Heap
+    - [x] MinHeap - based on complete binary heap
+    - [x] MaxHeap - based on complete binary heap
+    - [ ] Binomial Heap - based on binomial tree
     - [ ] Fibonacci Heap
 - [ ] Priority Queue
 - [ ] Bloom Filters
