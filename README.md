@@ -9,10 +9,16 @@ This is a naive implementation of standard datastructures for learning.
 
 The following data structures will be implemented.
 
-- [ ] Stack
-- [ ] Queue
-- [ ] Singly Linked List
-- [ ] Doubly Linked List
+- Stack
+    - [x] Array Based
+    - [ ] Object Based
+- Queue
+    - [x] Array Based
+    - [ ] Object Based
+- Singly Linked List
+    - Object Based
+- Doubly Linked List
+    - Object Based
 - [ ] Skip List
 - [ ] Hash Table
 - Heaps

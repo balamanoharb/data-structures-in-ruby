@@ -1,5 +1,5 @@
 require 'test_helper'
-
+MinHeap = ArrayBased::MinHeap
 describe MinHeap do
   
   it "creates empty heap" do

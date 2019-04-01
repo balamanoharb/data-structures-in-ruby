@@ -1,5 +1,5 @@
 require 'test_helper'
-
+MaxHeap = ArrayBased::MaxHeap
 describe MaxHeap do
   
   it "creates empty heap" do
