@@ -5,10 +5,12 @@ module Containers
 
       def initialize
         @store = []
+        self
       end
 
       def push element
         store.push element
+        self
       end
 
       def pop

@@ -16,6 +16,7 @@ The following data structures will be implemented.
     - [x] Array Based
     - [ ] Object Based
 - Singly Linked List
+    - Array Based
     - Object Based
 - Doubly Linked List
     - Object Based
@@ -58,3 +59,6 @@ The following data structures will be implemented.
   - configured travis ci
 - configure for codecov / coveralls / codacy / codeclimate
   - configured codeclimate
+
+
+http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/40671.pdf

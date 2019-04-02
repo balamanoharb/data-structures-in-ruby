@@ -19,12 +19,13 @@ module Containers
         store.empty?
       end
 
-      def enqueue(element)
+      def enqueue(obj)
         raise QueueError, "Queue capacity full" if full?
-        store.push element
+        store.push obj
+        obj
       end
 
-      def dequeue(element)
+      def dequeue
         store.shift
       end
 
@@ -35,7 +36,7 @@ module Containers
       def rear
         store.last
       end
-       
+
       private
       def store
         @store

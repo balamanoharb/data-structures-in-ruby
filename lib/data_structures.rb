@@ -6,7 +6,8 @@ end
 module Algorithms; end
 
 # data structures
-
+require_relative "containers/array_based/stack"
+require_relative "containers/array_based/queue"
 require_relative "containers/array_based/binary_heap"
 
 # algorithms
