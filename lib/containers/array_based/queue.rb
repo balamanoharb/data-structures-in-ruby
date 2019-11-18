@@ -32,9 +32,15 @@ module Containers
       def front
         store.first
       end
+      alias peek front
+
 
       def rear
         store.last
+      end
+
+      def size
+        store.size
       end
 
       private

@@ -5,9 +5,37 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2d1b85c38777dd7660cd/test_coverage)](https://codeclimate.com/github/balamanoharb/ruby-data-structures-and-algorithms/test_coverage)
 
 
-This is a naive implementation of standard datastructures for learning.
+## Description
 
-The following data structures will be implemented.
+This is a naive implementation of datastructures and algorithms for learning and experimenting.
+
+>Disclaimer : This is not intended for production usage.
+
+### Stack
+
+- LIFO (Last In First Out)
+- only allowed operations are push and pop
+
+| Operation | Time Complexity | Additional info |
+|-----------|-----------------|-----------------|
+| push      |    O(1)         | adds an element |
+| pop       |    O(1)         | removes the last element and returns it |
+| peek      |    O(1)         | returns the last element or nil      |
+| search    |    O(n)         | has to pop all elements in wors case |
+| empty?    |    O(1)         | returns true or false                |
+| size      |    O(1)         | returns the current size of stack    |
+| full?     |    O(1)         | returns true or false - if the capacity is full |
+
+### Queue / FIFO (First In First Out)
+
+### Singly Linked List
+
+### Doubly Linked list
+
+## ArrayBased Implementations
+
+- stack
+- Queue
 
 - Stack
     - [x] Array Based
@@ -52,13 +80,6 @@ The following data structures will be implemented.
     - [ ] B Trees
     - [ ] B+ Trees
     - [ ] Interval Tree0
-
-## Build and Code Coverage
-
-- configure for travis / circle ci
-  - configured travis ci
-- configure for codecov / coveralls / codacy / codeclimate
-  - configured codeclimate
 
 
 
