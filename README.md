@@ -11,31 +11,51 @@ This is a naive implementation of datastructures and algorithms for learning and
 
 >Disclaimer : This is not intended for production usage.
 
+## DataStructures and Algorithms overview
+
+- Since this is done just for experiment, all containers can be initialized with an array. However it won't be deep copied. Instead, just the array elements will be pushed to the container, similar to how Set works.
+
 ### Stack
 
 - LIFO (Last In First Out)
-- only allowed operations are push and pop
+- only allowed operations are push and pop.
+- To search an element in a stack, we have repeatedly pop till we find the element. It's a bad use case for searching.
 
 | Operation | Time Complexity | Additional info |
 |-----------|-----------------|-----------------|
 | push      |    O(1)         | adds an element |
 | pop       |    O(1)         | removes the last element and returns it |
-| peek      |    O(1)         | returns the last element or nil      |
-| search    |    O(n)         | has to pop all elements in wors case |
+| peek / top|    O(1)         | returns the last element or nil      |
 | empty?    |    O(1)         | returns true or false                |
-| size      |    O(1)         | returns the current size of stack    |
 | full?     |    O(1)         | returns true or false - if the capacity is full |
+| size / length |    O(1)         | returns the current size of stack    |
 
-### Queue / FIFO (First In First Out)
+### Queue
+
+- FIFO (First In First Out)
+- insertion happens at one end (rear) 
+- deletion happens at one end (front)
+
+| Operation | Time Complexity | Additional info |
+|-----------|-----------------|-----------------|
+| push / enqueue|    O(1)      | adds an element to the rear end |
+| pop / dequeue | O(1)         | deletes the first element and returns it |
+| front     |    O(1)         | returns the first element | 
+| rear      |    O(1)         | returns the last element |
+| empty?    |    O(1)         | returns true or false |
+| full?     |    O(1)         | returns true or false - if the capacity is full |
+| size / length |    O(1)         | returns the current size of stack    |
 
 ### Singly Linked List
 
+- can be traversed only one way
+
 ### Doubly Linked list
 
-## ArrayBased Implementations
 
-- stack
-- Queue
+## Data Structures that will be implemented
+
+
 
 - Stack
     - [x] Array Based
@@ -44,15 +64,19 @@ This is a naive implementation of datastructures and algorithms for learning and
     - [x] Array Based
     - [ ] Object Based
 - Singly Linked List
-    - Array Based
-    - Object Based
+    - [ ] Array Based
+    - [ ] Object Based
 - Doubly Linked List
     - Object Based
 - [ ] Skip List
 - [ ] Hash Table
 - Heaps
-    - [x] MinHeap - based on complete binary heap
-    - [x] MaxHeap - based on complete binary heap
+    - MinHeap
+      - [ ] Array Based
+      - [ ] Object Based
+    - MaxHeap
+      - [ ] Array Based
+      - [ ] Object Based
     - [ ] Binomial Heap - based on binomial tree
     - [ ] Fibonacci Heap
 - [ ] Priority Queue
@@ -83,5 +107,5 @@ This is a naive implementation of datastructures and algorithms for learning and
 
 
 
-
-http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/40671.pdf
+- https://github.com/kanwei/algorithms/
+- http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/40671.pdf

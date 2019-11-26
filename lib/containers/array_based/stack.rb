@@ -1,14 +1,15 @@
+require_relative "./store"
+require_relative "../../dsa_errors"
+
 module Containers
   module ArrayBased
-
+    
     class Stack
-
-      def initialize
-        @store = []
-        self
-      end
+      
+      include Store
 
       def push element
+        raise SizeLimitReachedError.new("Stack", capacity) if full?
         store.push element
         self
       end
@@ -20,22 +21,8 @@ module Containers
       def peek
         store.last
       end
-
-      def size
-        store.size
-      end
-      alias length size
-
-      def empty?
-        store.empty?
-      end
-
-      private
-      def store
-        @store
-      end
+      alias top peek
 
     end
-
   end
 end

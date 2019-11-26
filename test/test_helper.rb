@@ -20,7 +20,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
 )
 SimpleCov.start
 
-require "data_structures"
+require "dsa"
 require "minitest/autorun"
 
 include Containers

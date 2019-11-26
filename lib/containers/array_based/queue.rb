@@ -1,55 +1,30 @@
+require_relative "./store"
+require_relative "../../dsa_errors"
 module Containers
   module ArrayBased
 
-    class QueueError < StandardError
-    end
-
     class Queue
-
-      def initialize(capacity)
-        @store = []
-        @capacity = capacity
+      include Store
+      
+      def push element
+        raise SizeLimitReachedError.new("Queue", capacity) if full?
+        store.push element
+        self
       end
+      alias_method :enqueue, :push
 
-      def full?
-        store.size == capacity
-      end
-
-      def empty?
-        store.empty?
-      end
-
-      def enqueue(obj)
-        raise QueueError, "Queue capacity full" if full?
-        store.push obj
-        obj
-      end
-
-      def dequeue
+      def pop
         store.shift
       end
+      alias_method :dequeue, :pop
 
       def front
         store.first
       end
-      alias peek front
-
+      alias_method :peek, :front
 
       def rear
         store.last
-      end
-
-      def size
-        store.size
-      end
-
-      private
-      def store
-        @store
-      end
-
-      def capacity
-        @capacity
       end
 
     end
