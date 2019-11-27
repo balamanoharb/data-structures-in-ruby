@@ -1,6 +1,6 @@
 # DataStructures and Algorithms
 
-[![Build Status](https://travis-ci.org/balamanoharb/ruby-data-structures-and-algorithms.svg?branch=master)](https://travis-ci.org/balamanoharb/ruby-data-structures-and-algorithms)
+[![Build Status](https://travis-ci.org/balamanoharb/dsa_ruby.svg?branch=master)](https://travis-ci.org/balamanoharb/dsa_ruby)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2d1b85c38777dd7660cd/maintainability)](https://codeclimate.com/github/balamanoharb/ruby-data-structures-and-algorithms/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2d1b85c38777dd7660cd/test_coverage)](https://codeclimate.com/github/balamanoharb/ruby-data-structures-and-algorithms/test_coverage)
 
@@ -9,7 +9,7 @@
 
 This is a naive implementation of datastructures and algorithms for learning and experimenting.
 
->Disclaimer : This is not intended for production usage.
+>Disclaimer : This project is meant to be used for experimental and learning purpose and not intended for production usage.
 
 ## DataStructures and Algorithms overview
 
@@ -48,26 +48,42 @@ This is a naive implementation of datastructures and algorithms for learning and
 
 ### Singly Linked List
 
-- can be traversed only one way
+- a collection of elements sequentially connected to each other by pointers
+- each element knows only its next element.
+- each element is represented by a node with two attributes. value and a next pointer (reference to next element)
 
 ### Doubly Linked list
 
+- also a collection of elements sequentially connected to each other by pointers
+- here each element knows its previous and next element.
+- each element is represented by node with 3 attributes. value, previous (reference to previous element) and a next pointer (reference to next element)
 
-## Data Structures that will be implemented
 
+## Data Structures and Algorithms Implementations
 
+### Array Based
+
+  Since this is done just for experiment, all containers can be initialized with an array. However it won't be deep copied. Instead, just the array elements will be pushed to the container, similar to how Set works.
 
 - Stack
-    - [x] Array Based
-    - [ ] Object Based
 - Queue
-    - [x] Array Based
-    - [ ] Object Based
+- Cicular Queue
+- Binary Heap
+  - Min Heap
+  - Max Heap
+
+
+### Object / Pointer Based
+
 - Singly Linked List
-    - [ ] Array Based
-    - [ ] Object Based
 - Doubly Linked List
-    - Object Based
+- Stack
+- Queue
+- Double Ended Queue
+- Singly Linked List
+- Doubly Linked List
+
+
 - [ ] Skip List
 - [ ] Hash Table
 - Heaps
