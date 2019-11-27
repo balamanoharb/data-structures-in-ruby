@@ -21,7 +21,6 @@ module Containers
       def front
         store.first
       end
-      alias_method :peek, :front
 
       def rear
         store.last

@@ -21,7 +21,7 @@ module Containers
       def peek
         store.last
       end
-      alias top peek
+      alias_method :top, :peek
 
     end
   end

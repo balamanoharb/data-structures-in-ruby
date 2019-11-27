@@ -20,19 +20,36 @@ describe Stack do
     assert err.message == "Stack reached the given size limit 3"
   end
 
-  it "push inserts an element -> the size gets updated and peek gives last element" do
+  it "inserts an element and the size gets updated when push is called" do
     s = Stack.new
     s.push(100)
     assert s.size == 1
-    assert s.peek == 100
   end
 
-  it "pop removes the last inserted element and reduces size" do
+  it "returns the last inserted element when top/peek is called" do
+    s = Stack.new
+    s.push 100
+    s.push 200
+    assert s.top == 200
+    assert s.peek == 200
+  end
+
+  it "deletes and returns the last inserted element and reduces size when pop gets called" do
     s = Stack.new
     s.push 100
     s.push 200
     assert s.pop == 200
     assert s.size == 1
+  end
+
+  it "returns true if the stack has reached its limit when full? is called" do
+    q = Stack.new([],1)
+    q.push 1010
+    assert q.full? == true
+  end
+
+  it "returns true if the stack is empty" do
+    assert Stack.new.empty? == true
   end
 
 end
