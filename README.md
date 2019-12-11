@@ -11,15 +11,15 @@ This is a naive implementation of datastructures and algorithms for learning and
 
 >Disclaimer : This project is meant to be used for experimental and learning purpose and not intended for production usage.
 
-## DataStructures and Algorithms overview
+## DataStructures
 
-- Since this is done just for experiment, all containers can be initialized with an array. However it won't be deep copied. Instead, just the array elements will be pushed to the container, similar to how Set works.
+- Since this is done just for experiment, all containers could be initialized with an array. However it won't be deep copied. Instead, just the array elements will be pushed to the container.
 
 ### Stack
 
 - LIFO (Last In First Out)
 - only allowed operations are push and pop.
-- To search an element in a stack, we have repeatedly pop till we find the element. It's a bad use case for searching.
+- To search an element in a stack, we have to repeatedly pop till we find the element. It's a bad use case for searching.
 
 | Operation | Time Complexity | Additional info |
 |-----------|-----------------|-----------------|
@@ -28,13 +28,15 @@ This is a naive implementation of datastructures and algorithms for learning and
 | peek / top|    O(1)         | returns the last element or nil      |
 | empty?    |    O(1)         | returns true or false                |
 | full?     |    O(1)         | returns true or false - if the capacity is full |
-| size / length |    O(1)         | returns the current size of stack    |
+| size / length |    O(1)     | returns the current size of stack    |
 
 ### Queue
 
 - FIFO (First In First Out)
 - insertion happens at one end (rear) 
 - deletion happens at one end (front)
+- To search an element in a Queue, we have to repeatedly pop untill we find the element. Queue is a bad use case for searching. Usually things that require delayed processing are put into queue.
+- Priority queues are used more often in practice.
 
 | Operation | Time Complexity | Additional info |
 |-----------|-----------------|-----------------|
@@ -44,13 +46,17 @@ This is a naive implementation of datastructures and algorithms for learning and
 | rear      |    O(1)         | returns the last element |
 | empty?    |    O(1)         | returns true or false |
 | full?     |    O(1)         | returns true or false - if the capacity is full |
-| size / length |    O(1)         | returns the current size of stack    |
+| size / length |    O(1)     | returns the current size of stack    |
 
 ### Singly Linked List
 
 - a collection of elements sequentially connected to each other by pointers
 - each element knows only its next element.
 - each element is represented by a node with two attributes. value and a next pointer (reference to next element)
+
+| Operation | Time Complexity | Desc |
+|-----------|-----------------|------|
+|
 
 ### Doubly Linked list
 
@@ -59,67 +65,47 @@ This is a naive implementation of datastructures and algorithms for learning and
 - each element is represented by node with 3 attributes. value, previous (reference to previous element) and a next pointer (reference to next element)
 
 
-## Data Structures and Algorithms Implementations
+## Algorithms
+
+### Binary Search
+
+**Pre Requisite**
+
+- List must be sorted.
+- Random access must be possible, which means it can only work on array
+- the elements in array must have comparison logic implements (<=>)
+
+**Time Complexity**
+
+- O(lg(n))
+
+**Space Complexity**
+
+**Note**
+
+- If there are duplicates, it returns the index first element the algo finds, it is not guaranteed to be the first occurence or the last occurence of the element.
+- It returns nil otherwise.
+
+
+
+## Implementations
 
 ### Array Based
 
-  Since this is done just for experiment, all containers can be initialized with an array. However it won't be deep copied. Instead, just the array elements will be pushed to the container, similar to how Set works.
-
 - Stack
 - Queue
-- Cicular Queue
 - Binary Heap
-  - Min Heap
-  - Max Heap
+    - Min Heap
+    - Max Heap
+
+### Object Pointer Based
 
 
-### Object / Pointer Based
+### Algorithms
 
-- Singly Linked List
-- Doubly Linked List
-- Stack
-- Queue
-- Double Ended Queue
-- Singly Linked List
-- Doubly Linked List
+- Search
+    - Binary Search
 
-
-- [ ] Skip List
-- [ ] Hash Table
-- Heaps
-    - MinHeap
-      - [ ] Array Based
-      - [ ] Object Based
-    - MaxHeap
-      - [ ] Array Based
-      - [ ] Object Based
-    - [ ] Binomial Heap - based on binomial tree
-    - [ ] Fibonacci Heap
-- [ ] Priority Queue
-- [ ] Bloom Filters
-- [ ] Graphs
-    - [ ] Directed
-    - [ ] Un-Directed
-- [ ] Disjoint Set
-- Trees
-    - [ ] N-ary Tree
-    - [ ] Binary Tree
-    - [ ] Binary Search Tree
-        - [ ] Self Balancing Trees
-            - [ ] AVL Tree
-            - [ ] Red Black Tree
-            - [ ] Interval Tree
-            - [ ] Splay Tree
-            - [ ] B - Tree
-    - Trie ( Prefix Tree )
-        - [ ] Ternary Search Tree
-        - [ ] Radix Tree
-    - [ ] Suffix Tree
-    - [ ] Fenwick Tree / Binary Indexed Tree
-    - [ ] Segment Tree
-    - [ ] B Trees
-    - [ ] B+ Trees
-    - [ ] Interval Tree0
 
 
 

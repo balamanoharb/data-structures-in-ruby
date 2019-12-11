@@ -11,4 +11,4 @@ require_relative "containers/array_based/queue"
 require_relative "containers/array_based/binary_heap"
 
 # algorithms
-require_relative "algorithms/search"
+require_relative "algorithms/binary_search"
