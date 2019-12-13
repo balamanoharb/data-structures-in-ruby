@@ -12,3 +12,4 @@ require_relative "containers/array_based/binary_heap"
 
 # algorithms
 require_relative "algorithms/binary_search"
+require_relative "algorithms/sort"

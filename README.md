@@ -35,8 +35,7 @@ This is a naive implementation of datastructures and algorithms for learning and
 - FIFO (First In First Out)
 - insertion happens at one end (rear) 
 - deletion happens at one end (front)
-- To search an element in a Queue, we have to repeatedly pop untill we find the element. Queue is a bad use case for searching. Usually things that require delayed processing are put into queue.
-- Priority queues are used more often in practice.
+- To search an element in a Queue, we have to repeatedly pop untill we find the element. Queue is a bad use case for searching. Usually things that require delayed processing are put into queue. Priority queues are used more often in practice.
 
 | Operation | Time Complexity | Additional info |
 |-----------|-----------------|-----------------|
@@ -69,11 +68,15 @@ This is a naive implementation of datastructures and algorithms for learning and
 
 ### Binary Search
 
+**Brief Explanation**
+
+Binary Search works by repeatedly eliminating half of the search space by comparing the middle element with the target. It begins with the whole array. If the middle element is greater than the target element, then the target must be present in the lower so it eliminates the upper half and narrows the search interval to lower half. Similarly, if the middle element is lessthan the target element, it narrows the search interval to upper half.
+
 **Pre Requisite**
 
 - List must be sorted.
 - Random access must be possible, which means it can only work on array
-- the elements in array must have comparison logic implements (<=>)
+- the elements in array must have comparison logic implemented (<=>)
 
 **Time Complexity**
 
@@ -81,12 +84,28 @@ This is a naive implementation of datastructures and algorithms for learning and
 
 **Space Complexity**
 
+- O(1) since only the input array is used.
+
 **Note**
 
 - If there are duplicates, it returns the index first element the algo finds, it is not guaranteed to be the first occurence or the last occurence of the element.
 - It returns nil otherwise.
 
+### Selection Sort
 
+Selection Sort works by repeatedly selecting the minimum number(in case of ascending) from the unsorted part of the array and places it to the beginning of unsorted array part.
+
+The algorithm maintains two sub arrays at any point during the iteration.
+
+The subarray which is already sorted. Remaining subarray which is unsorted.
+
+**Time Complexity**
+
+O(n^2)
+
+**Space Complexity**
+
+O(1)
 
 ## Implementations
 
@@ -98,13 +117,17 @@ This is a naive implementation of datastructures and algorithms for learning and
     - Min Heap
     - Max Heap
 
-### Object Pointer Based
+### Object / Pointer Based
 
 
 ### Algorithms
 
 - Search
     - Binary Search
+        - find if the given element exist
+        - get the index of first occurence of the given element [array with duplicates]
+        - get the index of last occurence of the given element [array with duplicates]
+- Sort
 
 
 
