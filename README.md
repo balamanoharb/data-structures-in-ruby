@@ -5,17 +5,15 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2d1b85c38777dd7660cd/test_coverage)](https://codeclimate.com/github/balamanoharb/ruby-data-structures-and-algorithms/test_coverage)
 
 
-## Description
+# Description
 
 This is a naive implementation of datastructures and algorithms for learning and experimenting.
 
 >Disclaimer : This project is meant to be used for experimental and learning purpose and not intended for production usage.
 
-## DataStructures
+# DataStructures
 
-- Since this is done just for experiment, all containers could be initialized with an array. However it won't be deep copied. Instead, just the array elements will be pushed to the container.
-
-### Stack
+## Stack
 
 - LIFO (Last In First Out)
 - only allowed operations are push and pop.
@@ -30,7 +28,7 @@ This is a naive implementation of datastructures and algorithms for learning and
 | full?     |    O(1)         | returns true or false - if the capacity is full |
 | size / length |    O(1)     | returns the current size of stack    |
 
-### Queue
+## Queue
 
 - FIFO (First In First Out)
 - insertion happens at one end (rear) 
@@ -47,7 +45,7 @@ This is a naive implementation of datastructures and algorithms for learning and
 | full?     |    O(1)         | returns true or false - if the capacity is full |
 | size / length |    O(1)     | returns the current size of stack    |
 
-### Singly Linked List
+## Singly Linked List
 
 - a collection of elements sequentially connected to each other by pointers
 - each element knows only its next element.
@@ -57,16 +55,16 @@ This is a naive implementation of datastructures and algorithms for learning and
 |-----------|-----------------|------|
 |
 
-### Doubly Linked list
+## Doubly Linked list
 
 - also a collection of elements sequentially connected to each other by pointers
 - here each element knows its previous and next element.
 - each element is represented by node with 3 attributes. value, previous (reference to previous element) and a next pointer (reference to next element)
 
 
-## Algorithms
+# Algorithms
 
-### Binary Search
+## Binary Search
 
 **Brief Explanation**
 
@@ -91,7 +89,85 @@ Binary Search works by repeatedly eliminating half of the search space by compar
 - If there are duplicates, it returns the index first element the algo finds, it is not guaranteed to be the first occurence or the last occurence of the element.
 - It returns nil otherwise.
 
-### Selection Sort
+## Sorting Algorithms
+
+### What is Sorting?
+
+- Sorting is arranging the elements in a list or collection in increasing or decreasing order of some property.
+- The list should be homogeneous.
+- A sorted list is a permutation of the original list.
+
+### Classification
+
+Sorting algorithms are often classified based on various parameters. Some of the parameters are:
+- Time Complexity
+- Space Complexity
+    - Inplace (constant memory)
+    - Memory usage grows with input size
+- Stability (original arrangement is kept even after sorting)
+  - consider a pack of cards > 6&hearts;, 5&spades;, 5&hearts;, 3&clubs;, 5&diams;
+  - upon sorting in ascending order > 3&clubs;, 5&spades;, 5&hearts;, 5&diams; 6&hearts;
+  - notice that the order for 5 -> &spades; &hearts; &diams; is preserved even after sording
+  - this preserving of order of appearance from original list is called stability
+- Internal Sort (all records are in main memory)
+- External Sort (records are on disk)
+- Recursive or not
+
+### Example
+
+- sorting can be performed on any complex data structure based on a property.
+- for example sorting product container based on user reviews or price
+- for simplicity let us consider a list of integers to explain algorithms.
+
+Consider a list "A"
+
+| 2 | 3 | 9 | 4 | 6 |
+|:-:|:-:|:-:|:-:|:-:|
+
+- sorted in increasing order based on value A[index]
+
+| 2 | 3 | 4 | 6 | 9 |
+|:-:|:-:|:-:|:-:|:-:|
+
+- sorted in descreasing order based on value A[index]
+
+| 9 | 6 | 4 | 3 | 2 |
+|:-:|:-:|:-:|:-:|:-:|
+
+- sorted in increasing order of number of factors for A[index]
+- a factor is a number that divides the given number
+
+| 2 | 3 | 9 | 4 | 6 |
+|:-:|:-:|:-:|:-:|:-:|
+
+
+### Applications
+
+- Effective searching
+    - Searching on a sorted data allows to use binary search which reduces time significantly
+- Ranking of things based on certain criteria
+    - Eg: Viewing products/places/hotels based user ratings, price, locality etc..
+- May be used as an intermediatory step when performing some complex data analysis.
+
+### List of Sorting Algorithms
+
+|  Name                                 | Best Case       | Worst Case          | Space Complexity | Stable? | Recursive? |
+|:--------------------------------------|:---------------:|:-------------------:|:----------------:|:-------:|:-----------|
+|[Bubble Sort](bubble_sort.md)          | O(n)            | O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
+|[Selection Sort](selection_sort.md)    | O(n<sup>2</sup>)| O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
+|[Insertion Sort](insertion_sort.md)    | O(n)            | O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
+|[Shell Sort](shell_sort.md)            | |     |              |         |            |
+|[Merge Sort](merge_sort.md)            | O(n log(n))     | O(n log(n))         | O(n)             |  Yes    |   Yes      |
+|[Quick Sort](quick_sort.md)            | O(n log(n))- avg| O(n<sup>2</sup>)    | O(log(n))        |  No     |   Yes      |
+|[Heap Sort](heap_sort.md)              | |     |              |         |            |
+|[Counting Sort](counting_sort.md)      | |     |              |         |            |
+|[Radix Sort](radix_sort.md)            | |     |              |         |            |
+|[Topological Sort](topological_sort.md)| |     |              |         |            |
+
+
+## Selection Sort
+
+**Brief Explanation**
 
 Selection Sort works by repeatedly selecting the minimum number(in case of ascending) from the unsorted part of the array and places it to the beginning of unsorted array part.
 
@@ -107,9 +183,9 @@ O(n^2)
 
 O(1)
 
-## Implementations
+# Implementations
 
-### Array Based
+## Array Based
 
 - Stack
 - Queue
@@ -117,19 +193,17 @@ O(1)
     - Min Heap
     - Max Heap
 
-### Object / Pointer Based
+## Object / Pointer Based
 
 
-### Algorithms
+## Algorithms
 
 - Search
     - Binary Search
         - find if the given element exist
         - get the index of first occurence of the given element [array with duplicates]
         - get the index of last occurence of the given element [array with duplicates]
-- Sort
-
-
+- Sorting
 
 
 - https://github.com/kanwei/algorithms/
