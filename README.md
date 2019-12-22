@@ -185,6 +185,10 @@ O(1)
 
 ## Quick Sort
 
+**Brief Explanation**
+
+Quick sort is based on divide conquer approach. It works by repeatedly partitioning the array based on a pivot element. After partitioning, the pivot element will be placed in its right position dividing the array into two partitions, with  smaller elements to the left of pivot and the larger elements to the right of pivot.
+
 **Time Complexity**
   - Best Case : O(nlog(n))
   - Average Case : O(n log(n))

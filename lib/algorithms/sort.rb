@@ -14,16 +14,12 @@ module Algorithms
       return container
     end
 
-    def self.quick_sort(container)
-      quick_sort_helper(container, 0, container.length - 1)
-      return container
-    end
-
-    def self.quick_sort_helper(container, low, high)
+    def self.quick_sort(container, low = 0, high = container.length - 1)
       return container if low > high
       pivot_index = partition(container, low, high)
-      quick_sort_helper(container, low, pivot_index - 1)
-      quick_sort_helper(container, pivot_index + 1, high)
+      quick_sort(container, low, pivot_index - 1)
+      quick_sort(container, pivot_index + 1, high)
+      return container
     end
 
     def self.partition(container, low, high)
