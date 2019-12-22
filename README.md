@@ -151,25 +151,25 @@ Consider a list "A"
 
 ### List of Sorting Algorithms
 
-|  Name                                 | Best Case       | Worst Case          | Space Complexity | Stable? | Recursive? |
-|:--------------------------------------|:---------------:|:-------------------:|:----------------:|:-------:|:-----------|
-|[Bubble Sort](bubble_sort.md)          | O(n)            | O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
-|[Selection Sort](selection_sort.md)    | O(n<sup>2</sup>)| O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
-|[Insertion Sort](insertion_sort.md)    | O(n)            | O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
-|[Shell Sort](shell_sort.md)            | |     |              |         |            |
-|[Merge Sort](merge_sort.md)            | O(n log(n))     | O(n log(n))         | O(n)             |  Yes    |   Yes      |
-|[Quick Sort](quick_sort.md)            | O(n log(n))- avg| O(n<sup>2</sup>)    | O(log(n))        |  No     |   Yes      |
-|[Heap Sort](heap_sort.md)              | |     |              |         |            |
-|[Counting Sort](counting_sort.md)      | |     |              |         |            |
-|[Radix Sort](radix_sort.md)            | |     |              |         |            |
-|[Topological Sort](topological_sort.md)| |     |              |         |            |
+|  Name                       | Best Case       | Worst Case          | Space Complexity | Stable? | Recursive? |
+|:----------------------------|:---------------:|:-------------------:|:----------------:|:-------:|:-----------|
+|Bubble Sort                  | O(n)            | O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
+|Selection Sort               | O(n<sup>2</sup>)| O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
+|Insertion Sort               | O(n)            | O(n<sup>2</sup>)    | O(1)             |  Yes    |   No       |
+|Shell Sort                   | |     |              |         |            |
+|Merge Sort                   | O(n log(n))     | O(n log(n))         | O(n)             |  Yes    |   Yes      |
+|Quick Sort                   | O(n log(n))- avg| O(n<sup>2</sup>)    | O(log(n))        |  No     |   Yes      |
+|Heap Sort                    | |     |              |         |            |
+|Counting Sort                | |     |              |         |            |
+|Radix Sort                   | |     |              |         |            |
+|Topological Sort             | |     |              |         |            |
 
 
 ## Selection Sort
 
 **Brief Explanation**
 
-Selection Sort works by repeatedly selecting the minimum number(in case of ascending) from the unsorted part of the array and places it to the beginning of unsorted array part.
+Selection sort maintains two array division with in the same array. Sorted part and unsorted part. Selection Sort works by repeatedly selecting the minimum number(in case of ascending) from the unsorted part of the array and places it to the end of sorted array, there by reducing the number of elements in unsorted array.
 
 The algorithm maintains two sub arrays at any point during the iteration.
 
@@ -182,6 +182,16 @@ O(n^2)
 **Space Complexity**
 
 O(1)
+
+## Quick Sort
+
+**Time Complexity**
+  - Best Case : O(nlog(n))
+  - Average Case : O(n log(n))
+  - Worst Case : O(n<sup>2</sup>)
+
+**Space Complexity**
+ - O(log(n))
 
 # Implementations
 
@@ -204,6 +214,8 @@ O(1)
         - get the index of first occurence of the given element [array with duplicates]
         - get the index of last occurence of the given element [array with duplicates]
 - Sorting
+    - Selection Sort
+    - Quick Sort
 
 
 - https://github.com/kanwei/algorithms/
