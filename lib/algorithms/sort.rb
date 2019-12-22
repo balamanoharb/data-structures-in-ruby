@@ -38,6 +38,45 @@ module Algorithms
       return pivot_index
     end
 
+    def self.merge_sort(container, low = 0, high = container.length - 1)
+      return container if low >= high
+      mid = low + (high - low) / 2
+      merge_sort(container, low, mid)
+      merge_sort(container, mid + 1, high)
+      return merge(container, low, mid, high)
+    end
+
+    def self.merge(container, low, mid, high)
+      left = container[low..mid]
+      right = container[(mid+1)..high]
+      left_i = 0
+      right_i = 0
+      cur = low
+      while(left_i < left.length && right_i < right.length)
+        if left[left_i] < right[right_i]
+          container[cur] = left[left_i]
+          left_i += 1
+        else
+          container[cur] = right[right_i]
+          right_i += 1
+        end
+        cur += 1
+      end
+
+      while(left_i < left.length)
+        container[cur] = left[left_i]
+        cur += 1
+        left_i += 1
+      end
+      
+      while(right_i < right.length)
+        container[cur] = right[right_i]
+        cur += 1
+        right_i += 1
+      end
+      return container
+    end
+
     def self.swap(container, i, j)
       container[i], container[j] = container[j], container[i]
     end

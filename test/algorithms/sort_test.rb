@@ -44,6 +44,7 @@ describe Sort do
     @test_inputs.each_with_index do |arr, i|
       assert Sort.selection_sort(arr) == @expected_outputs[i]
       assert Sort.quick_sort(arr) == @expected_outputs[i]
+      assert Sort.merge_sort(arr) == @expected_outputs[i]
     end
   end
 
