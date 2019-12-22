@@ -9,7 +9,7 @@ module Algorithms
             min_index = j
           end
         end
-        container[i], container[min_index] = container[min_index], container[i]
+        swap(container, i, min_index)
       end
       return container
     end
