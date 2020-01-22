@@ -17,6 +17,7 @@ This is a naive implementation of datastructures and algorithms for learning and
 
 - LIFO (Last In First Out)
 - only allowed operations are push and pop.
+- insertion and deletion both happen only at one end
 - To search an element in a stack, we have to repeatedly pop till we find the element. It's a bad use case for searching.
 
 | Operation | Time Complexity | Additional info |
@@ -61,6 +62,37 @@ This is a naive implementation of datastructures and algorithms for learning and
 - here each element knows its previous and next element.
 - each element is represented by node with 3 attributes. value, previous (reference to previous element) and a next pointer (reference to next element)
 
+## Hash
+
+TODO Expand Explanation
+
+- Hash theoritically gurantees O(1) for insert, delete and search / retreival.
+- The main components composing this data structure are:
+  - Hash Function
+    - Must be Efficient - runs in O(1) time - Should be really fast.
+    - Must be Consistent - Gives the same output for an input
+    - Should give distributed result - The output it gives (i.e) the key should be distributed.
+  - Modulo Operation
+  - Load Factor
+    - Used for measuring performance and handling collision
+  - Collision Handling Mechanism
+    - Separate Chaining
+    - Open Addressing
+      - Linear Probing
+      - Quadratic Probing
+      - Double Hashing
+
+### References :
+- https://www.geeksforgeeks.org/hashing-set-1-introduction/
+- https://www.geeksforgeeks.org/hashing-set-2-separate-chaining/
+- https://www.geeksforgeeks.org/hashing-set-3-open-addressing/
+
+### Hash Implementation in Ruby :
+
+- https://developers.redhat.com/blog/2017/02/27/towards-faster-ruby-hash-tables/
+- https://anadea.info/blog/how-hash-table-works-ruby-examples
+- https://launchschool.com/blog/how-the-hash-works-in-ruby
+- https://ruby-doc.org/core-2.1.0/Hash.html
 
 # Algorithms
 
@@ -73,7 +105,7 @@ Binary Search works by repeatedly eliminating half of the search space by compar
 **Pre Requisite**
 
 - List must be sorted.
-- Random access must be possible, which means it can only work on array
+- Random access must be possible, which means it can only work on array like structures
 - the elements in array must have comparison logic implemented (<=>)
 
 **Time Complexity**
@@ -168,7 +200,7 @@ Consider a list "A"
 
 http://sortbenchmark.org/
 
-## Selection Sort
+### Selection Sort
 
 **Brief Explanation**
 
@@ -186,7 +218,11 @@ O(n^2)
 
 O(1)
 
-## Quick Sort
+**Stability**
+
+Stable
+
+### Quick Sort
 
 **Brief Explanation**
 
@@ -199,6 +235,43 @@ Quick sort is based on divide conquer approach. It works by repeatedly partition
 
 **Space Complexity**
  - O(log(n))
+
+ **Stability**
+
+ Not Stable
+
+### Merge Sort
+
+**Brief Explanation**
+
+TODO
+**Time Complexity**
+  - Best Case : O(n log(n))
+  - Average Case : O(n log(n))
+  - Worst Case : O(n log(n))
+
+**Space Complexity**
+ - O(log(n))
+
+**Stability**
+
+ Stable
+
+**Why is Merge Sort preferred than Quick Sort**
+
+Quicksort has a smaller constant than merge sort. So if they’re both O(n log n) time, quicksort is faster. And quicksort is faster in practice because it hits the average case way more often than the worst case.
+
+## Breadth First Search
+
+**Brief Explanation**
+
+Breadth First Search works on graphs. Main use cases for Breadth First Search are:
+1. To find if two nodes A and B are connected (i.e) To find a path between A and B
+2. To find the shortest path from A to B
+
+
+
+_______________________________________________________
 
 # Implementations
 
@@ -218,11 +291,11 @@ Quick sort is based on divide conquer approach. It works by repeatedly partition
 - Search
     - Binary Search
         - find if the given element exist
-        - get the index of first occurence of the given element [array with duplicates]
-        - get the index of last occurence of the given element [array with duplicates]
+        
 - Sorting
     - Selection Sort
     - Quick Sort
+    - Merge Sort
 
 
 - https://github.com/kanwei/algorithms/
