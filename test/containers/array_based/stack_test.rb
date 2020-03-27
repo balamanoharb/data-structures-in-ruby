@@ -16,7 +16,7 @@ describe Stack do
     s.push 100
     s.push 200
     s.push 300
-    err = ->{ s.push(100) }.must_raise SizeLimitReachedError
+    err = _ { s.push(100) }.must_raise SizeLimitReachedError
     assert err.message == "Stack reached the given size limit 3"
   end
 

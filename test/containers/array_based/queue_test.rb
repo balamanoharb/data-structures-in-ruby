@@ -20,7 +20,7 @@ describe Queue do
   it "throws error when the size limit is reached" do
     q = Queue.new([], 3)
     q.enqueue(1).enqueue(2).enqueue(3)
-    err = ->{ q.push(100) }.must_raise SizeLimitReachedError
+    err = _ { q.push(100) }.must_raise SizeLimitReachedError
     assert err.message == "Queue reached the given size limit 3"
   end
 
