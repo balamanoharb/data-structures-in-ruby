@@ -11,6 +11,27 @@ This is a naive implementation of datastructures and algorithms for learning and
 
 >Disclaimer : This project is meant to be used for experimental and learning purpose and not intended for production usage.
 
+# Datastructures and Algorithms List
+
+- Stack
+- Queue
+- Linked List
+- Doubly Lilnked List
+- Hash Table
+- Heap
+- Priority Queue
+- Binary Tree
+- Binary Search Tree
+- AVL Tree
+- Red-Black Tree
+- Trie
+- N-ary Tree
+- Segment Tree
+- Fenwick Tree (Binary Indexed Tree)
+- Graph (both directed and undirected)
+- Disjoint Set
+- Bloom Filter
+
 # DataStructures
 
 ## Stack
